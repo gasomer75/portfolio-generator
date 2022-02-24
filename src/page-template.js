@@ -1,6 +1,4 @@
-
 // About Me section - conditional based upon user decision to include or not
-
 const generateAbout = aboutText => {
     if (!aboutText) {
         return '';
@@ -15,7 +13,6 @@ const generateAbout = aboutText => {
 };
 
 // FUNCTION TO GENERATE PROJECTS (.filter is used to select featured or non featured projects)
-
 const generateProjects = projectsArr => {
     return `
         <section class="my-3" id="portfolio">
@@ -62,12 +59,9 @@ const generateProjects = projectsArr => {
 // Function to generate HTML page using the User data input (variable names go in 
 // array order 0,1,2,... regardless of variable name unless the variable name is 
 // identical to the name assigned in the array)
-
 module.exports = templateData => {
     // destructure page data by section
     const {projects, about, ...header} = templateData;
-
-    console.log(projects, about, header);
 
     return `
     <!DOCTYPE html> 
@@ -102,4 +96,3 @@ module.exports = templateData => {
     </html>
      `;
 };
-
